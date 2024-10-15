@@ -16,7 +16,7 @@ class _NavBarState extends State<NavBar> {
   bool isHoveredResume = false;
 
   Future<void> _openPDF() async {
-    final Uri pdfUrl = Uri.parse('https://drive.google.com/file/d/1yrW66xtokNIWq1-tiJES8XeQsWIEcfL_/view?usp=sharing');
+    final Uri pdfUrl = Uri.parse('https://drive.google.com/file/d/1yyS2gZ7b6BocTkfybGvuxxUlQO9tKy5Y/view?usp=sharing');
 
     if (await canLaunchUrl(pdfUrl)) {
       await launchUrl(
@@ -149,7 +149,7 @@ class _NavDrawerState extends State<NavDrawer> {
   bool isHoveredResume = false;
 
   Future<void> _openPDF() async {
-    final Uri pdfUrl = Uri.parse('https://drive.google.com/file/d/1yrW66xtokNIWq1-tiJES8XeQsWIEcfL_/view?usp=sharing');
+    final Uri pdfUrl = Uri.parse('https://drive.google.com/file/d/1yyS2gZ7b6BocTkfybGvuxxUlQO9tKy5Y/view?usp=sharing');
 
     if (await canLaunchUrl(pdfUrl)) {
       await launchUrl(
