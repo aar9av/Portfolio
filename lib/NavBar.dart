@@ -223,6 +223,7 @@ class _NavDrawerState extends State<NavDrawer> {
                         ),
                         GestureDetector(
                           onTap: () {
+                            Navigator.pop(context);
                             _openPDF();
                           },
                           child: MouseRegion(
