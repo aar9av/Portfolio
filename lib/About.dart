@@ -78,7 +78,7 @@ class ProfilePicture extends StatelessWidget {
                         )
                     ),
                     child: Image.asset(
-                      'ProfilePicture.jpeg',
+                      'About/ProfilePicture.jpeg',
                       fit: BoxFit.cover,
                     ),
                   ),

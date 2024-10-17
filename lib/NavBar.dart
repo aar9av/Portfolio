@@ -32,17 +32,16 @@ class _NavBarState extends State<NavBar> {
   Widget build(BuildContext context) {
     return LayoutBuilder(
       builder: (context, constraints) {
-        if(constraints.maxWidth > 800) {
+        if(constraints.maxWidth >= 700) {
           return AppBar(
               backgroundColor: ThemeColors.navy,
               elevation: 0,
               leading: Padding(
                 padding: EdgeInsets.all(10),
                 child: Image.asset(
-                  'A.png',
-                  width: 40,
-                  height: 40,
+                  'NavBar/Logo.png',
                   fit: BoxFit.cover,
+                  color: ThemeColors.green,
                 ),
               ),
               actions: [
@@ -50,7 +49,6 @@ class _NavBarState extends State<NavBar> {
                 NavBarButton(text: 'Skills'),
                 NavBarButton(text: 'Projects'),
                 NavBarButton(text: 'Experience'),
-                NavBarButton(text: 'Coding Profiles'),
                 NavBarButton(text: 'Contact'),
                 Padding(
                   padding: const EdgeInsets.only(left: 16, right: 30, top: 20),
@@ -102,7 +100,7 @@ class _NavBarState extends State<NavBar> {
             leading: Padding(
               padding: EdgeInsets.all(10),
               child: Image.asset(
-                'A.png',
+                'NavBar/Logo.png',
                 width: 40,
                 height: 40,
                 fit: BoxFit.cover,
@@ -116,7 +114,7 @@ class _NavBarState extends State<NavBar> {
                     alignment: Alignment.center,
                     transform: Matrix4.rotationY(3.1416),
                     child: Image.asset(
-                      'Menu.png',
+                      'NavBar/Menu.png',
                       height: 30,
                       width: 30,
                       color: ThemeColors.green,
@@ -173,7 +171,7 @@ class _NavDrawerState extends State<NavDrawer> {
               alignment: Alignment.topRight,
               child: GestureDetector(
                 child: Image.asset(
-                  'Cancel.png',
+                  'NavBar/Cancel.png',
                   height: 20,
                   width: 20,
                   color: ThemeColors.green,
@@ -209,10 +207,6 @@ class _NavDrawerState extends State<NavDrawer> {
                         Padding(
                           padding: const EdgeInsets.all(5.0),
                           child: NavBarButton(text: 'Experience'),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.all(5.0),
-                          child: NavBarButton(text: 'Coding Profiles'),
                         ),
                         Padding(
                           padding: const EdgeInsets.all(5.0),

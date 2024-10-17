@@ -40,9 +40,9 @@ class _PortfolioHomePageState extends State<PortfolioHomePage> {
       endDrawer: NavDrawer(),
       body: Row(
         children: [
-          MediaQuery.of(context).size.height >= 600 && MediaQuery.of(context).size.width >= 900 ? LeftSideBar() : SizedBox(width: 0,),
+          MediaQuery.of(context).size.height >= 600 && MediaQuery.of(context).size.width >= 1000 ? LeftSideBar() : SizedBox(width: 0,),
           CenterSection(),
-          MediaQuery.of(context).size.height >= 600 && MediaQuery.of(context).size.width >= 900 ? RightSideBar() : SizedBox(width: 0,),
+          MediaQuery.of(context).size.height >= 600 && MediaQuery.of(context).size.width >= 1000 ? RightSideBar() : SizedBox(width: 0,),
         ],
       ),
       backgroundColor: ThemeColors.navy,

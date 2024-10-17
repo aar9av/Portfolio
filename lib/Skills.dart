@@ -46,25 +46,25 @@ class Skills extends StatelessWidget {
           width: MediaQuery.of(context).size.width * 0.8,
           child: Stack(
             children: [
-              HexagonalWidget(x: side * x * 1, y: side * y * 1, side: side * 0.6, imagePath: 'Figma.png', border: Colors.redAccent, tech: 'Figma'),
-              HexagonalWidget(x: side * x * 2, y: side * y * 1, side: side, imagePath: 'Maps.png', border: Colors.green, tech: 'Google Maps API'),
-              HexagonalWidget(x: side * x * 3, y: side * y * 1, side: side, imagePath: 'Github96.png', border: Colors.black, tech: 'GitHub'),
-              HexagonalWidget(x: side * x * 4, y: side * y * 1, side: side * 0.8, imagePath: 'Mysql.png', border: Colors.orangeAccent, tech: 'My SQL Server'),
-              HexagonalWidget(x: side * x * 5, y: side * y * 1, side: side, imagePath: 'Java.png', border: Colors.deepOrangeAccent, tech: 'JAVA'),
-              HexagonalWidget(x: side * x * 6, y: side * y * 1, side: side * 0.5, imagePath: 'Canva.png', border: Colors.blueAccent, tech: 'Canva'),
+              HexagonalWidget(x: side * x * 1, y: side * y * 1, side: side * 0.6, imagePath: 'Skills/Figma.png', border: Colors.redAccent, tech: 'Figma'),
+              HexagonalWidget(x: side * x * 2, y: side * y * 1, side: side, imagePath: 'Skills/Maps.png', border: Colors.green, tech: 'Google Maps API'),
+              HexagonalWidget(x: side * x * 3, y: side * y * 1, side: side, imagePath: 'Skills/Github96.png', border: Colors.black, tech: 'GitHub'),
+              HexagonalWidget(x: side * x * 4, y: side * y * 1, side: side * 0.8, imagePath: 'Skills/Mysql.png', border: Colors.orangeAccent, tech: 'My SQL Server'),
+              HexagonalWidget(x: side * x * 5, y: side * y * 1, side: side, imagePath: 'Skills/Java.png', border: Colors.deepOrangeAccent, tech: 'JAVA'),
+              HexagonalWidget(x: side * x * 6, y: side * y * 1, side: side * 0.5, imagePath: 'Skills/Canva.png', border: Colors.blueAccent, tech: 'Canva'),
 
-              HexagonalWidget(x: side * x * 1.5, y: side * y * 2, side: side, imagePath: 'Gemini.png', border: Colors.blueGrey, tech: 'Google Gemini AI API'),
-              HexagonalWidget(x: side * x * 2.5, y: side * y * 2, side: side, imagePath: 'Flutter.png', border: Colors.blue, tech: 'Flutter'),
-              HexagonalWidget(x: side * x * 3.5, y: side * y * 2, side: side, imagePath: 'Postgresql.png', border: Colors.indigo, tech: 'PostgreSQL'),
-              HexagonalWidget(x: side * x * 4.5, y: side * y * 2, side: side, imagePath: 'Firebase.png', border: Colors.orangeAccent, tech: 'Firebase'),
-              HexagonalWidget(x: side * x * 5.5, y: side * y * 2, side: side, imagePath: 'C++.png', border: Colors.blueAccent, tech: 'C++'),
+              HexagonalWidget(x: side * x * 1.5, y: side * y * 2, side: side, imagePath: 'Skills/Gemini.png', border: Colors.blueGrey, tech: 'Google Gemini AI API'),
+              HexagonalWidget(x: side * x * 2.5, y: side * y * 2, side: side, imagePath: 'Skills/Flutter.png', border: Colors.blue, tech: 'Flutter'),
+              HexagonalWidget(x: side * x * 3.5, y: side * y * 2, side: side, imagePath: 'Skills/Postgresql.png', border: Colors.indigo, tech: 'PostgreSQL'),
+              HexagonalWidget(x: side * x * 4.5, y: side * y * 2, side: side, imagePath: 'Skills/Firebase.png', border: Colors.orangeAccent, tech: 'Firebase'),
+              HexagonalWidget(x: side * x * 5.5, y: side * y * 2, side: side, imagePath: 'Skills/C++.png', border: Colors.blueAccent, tech: 'C++'),
 
-              HexagonalWidget(x: side * x * 2, y: side * y * 3, side: side * 0.8, imagePath: 'Neon.png', border: Colors.greenAccent, tech: 'Neon Serverless Database'),
-              HexagonalWidget(x: side * x * 3, y: side * y * 3, side: side, imagePath: 'Office.png', border: Colors.deepOrange, tech: 'MS Office'),
-              HexagonalWidget(x: side * x * 4, y: side * y * 3, side: side, imagePath: 'Dart.png', border: Colors.blue, tech: 'Dart'),
-              HexagonalWidget(x: side * x * 5, y: side * y * 3, side: side, imagePath: 'Android.png', border: Colors.lightGreenAccent, tech: 'Android Development'),
-              HexagonalWidget(x: side * x * 6, y: side * y * 3, side: side, imagePath: 'Git.png', border: Colors.redAccent, tech: 'Git'),
-              HexagonalWidget(x: side * x * 1.25, y: side * y * 3.25, side: side * 0.6, imagePath: 'C.png', border: Colors.indigoAccent, tech: 'C Language'),
+              HexagonalWidget(x: side * x * 2, y: side * y * 3, side: side * 0.8, imagePath: 'Skills/Neon.png', border: Colors.greenAccent, tech: 'Neon Serverless Database'),
+              HexagonalWidget(x: side * x * 3, y: side * y * 3, side: side, imagePath: 'Skills/Office.png', border: Colors.deepOrange, tech: 'MS Office'),
+              HexagonalWidget(x: side * x * 4, y: side * y * 3, side: side, imagePath: 'Skills/Dart.png', border: Colors.blue, tech: 'Dart'),
+              HexagonalWidget(x: side * x * 5, y: side * y * 3, side: side, imagePath: 'Skills/Android.png', border: Colors.lightGreenAccent, tech: 'Android Development'),
+              HexagonalWidget(x: side * x * 6, y: side * y * 3, side: side, imagePath: 'Skills/Git.png', border: Colors.redAccent, tech: 'Git'),
+              HexagonalWidget(x: side * x * 1.25, y: side * y * 3.25, side: side * 0.6, imagePath: 'Skills/C.png', border: Colors.indigoAccent, tech: 'C Language'),
             ],
           )
         ),
@@ -159,7 +159,6 @@ class HexagonClipper extends CustomClipper<Path> {
   Path getClip(Size size) {
     double width = size.width;
     double height = size.height;
-    double sideLength = width / 2;
 
     Path path = Path();
     path.moveTo(width * 0.5, 0);
