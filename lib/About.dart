@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
-
 import 'ThemeColors.dart';
 
 class About extends StatelessWidget {
-  const About({super.key});
+  final ScrollController scrollController;
+  final GlobalKey projectsKey;
+
+  const About({super.key, required this.scrollController, required this.projectsKey});
 
   @override
   Widget build(BuildContext context) {
@@ -13,14 +15,14 @@ class About extends StatelessWidget {
             return Row(
               children: [
                 ProfilePicture(),
-                Expanded(child: Description()),
+                Expanded(child: Description(scrollController: scrollController, projectsKey: projectsKey,)),
               ],
             );
           } else {
             return Column(
               children: [
                 ProfilePicture(),
-                Description(),
+                Description(scrollController: scrollController, projectsKey: projectsKey,),
               ],
             );
           }
@@ -78,7 +80,7 @@ class ProfilePicture extends StatelessWidget {
                         )
                     ),
                     child: Image.asset(
-                      'About/ProfilePicture.jpeg',
+                      'ProfilePicture.jpeg',
                       fit: BoxFit.cover,
                     ),
                   ),
@@ -93,7 +95,29 @@ class ProfilePicture extends StatelessWidget {
 }
 
 class Description extends StatelessWidget {
-  const Description({super.key});
+  final ScrollController scrollController;
+  final GlobalKey projectsKey;
+
+  const Description({super.key, required this.scrollController, required this.projectsKey});
+
+  void _scrollToSection() {
+    print('IIIII');
+    scrollController.animateTo(
+      0,
+      duration: Duration(microseconds: 1),
+      curve: Curves.easeInOut,
+    ).then((_) {
+      if (projectsKey.currentContext != null) {
+        final RenderBox renderBox = projectsKey.currentContext!.findRenderObject() as RenderBox;
+        final position = renderBox.localToGlobal(Offset.zero).dy - AppBar().preferredSize.height;
+        scrollController.animateTo(
+          position,
+          duration: Duration(milliseconds: 500),
+          curve: Curves.easeInOut,
+        );
+      }
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -130,7 +154,7 @@ class Description extends StatelessWidget {
           SizedBox(height: 20),
           ElevatedButton(
             onPressed: () {
-
+              _scrollToSection();
             },
             style: ElevatedButton.styleFrom(
               padding: EdgeInsets.symmetric(

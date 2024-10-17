@@ -94,6 +94,14 @@ class _ContactState extends State<Contact> {
               ),
             ),
           ),
+          SizedBox(height: 80,),
+          Text(
+            'Developed by Arnav Gupta.',
+            style: TextStyle(
+              color: ThemeColors.slate,
+              fontSize: 18,
+            ),
+          ),
         ],
       ),
     );

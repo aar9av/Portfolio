@@ -32,16 +32,22 @@ class PortfolioHomePage extends StatefulWidget {
 }
 
 class _PortfolioHomePageState extends State<PortfolioHomePage> {
+  final ScrollController _scrollController = ScrollController();
+  final GlobalKey _aboutKey = GlobalKey();
+  final GlobalKey _skillsKey = GlobalKey();
+  final GlobalKey _projectsKey = GlobalKey();
+  final GlobalKey _experienceKey = GlobalKey();
+  final GlobalKey _contactKey = GlobalKey();
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: NavBar(),
-      endDrawer: NavDrawer(),
+      appBar: NavBar(scrollController: _scrollController, aboutKey: _aboutKey, skillsKey: _skillsKey, projectsKey: _projectsKey, experienceKey: _experienceKey, contactKey: _contactKey),
+      endDrawer: NavDrawer(scrollController: _scrollController, aboutKey: _aboutKey, skillsKey: _skillsKey, projectsKey: _projectsKey, experienceKey: _experienceKey, contactKey: _contactKey),
       body: Row(
         children: [
           MediaQuery.of(context).size.height >= 600 && MediaQuery.of(context).size.width >= 1000 ? LeftSideBar() : SizedBox(width: 0,),
-          CenterSection(),
+          CenterSection(scrollController: _scrollController, aboutKey: _aboutKey, skillsKey: _skillsKey, projectsKey: _projectsKey, experienceKey: _experienceKey, contactKey: _contactKey),
           MediaQuery.of(context).size.height >= 600 && MediaQuery.of(context).size.width >= 1000 ? RightSideBar() : SizedBox(width: 0,),
         ],
       ),

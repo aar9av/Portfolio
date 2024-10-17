@@ -22,11 +22,11 @@ class LeftSideBar extends StatelessWidget {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    SocialIconButton(icon: 'Sidebar/GitHub.png', url: 'https://github.com/aar9av',),
-                    SocialIconButton(icon: 'Sidebar/LinkedIn.png', url: 'https://www.linkedin.com/in/aar9av/',),
-                    SocialIconButton(icon: 'Sidebar/Instagram.png', url: 'https://www.instagram.com/aar9av/',),
-                    SocialIconButton(icon: 'Sidebar/Codechef.png', url: 'https://www.codechef.com/users/aar9av',),
-                    SocialIconButton(icon: 'Sidebar/Leetcode.png', url: 'https://leetcode.com/u/aar9av/',),
+                    SocialIconButton(icon: 'GitHub.png', url: 'https://github.com/aar9av',),
+                    SocialIconButton(icon: 'LinkedIn.png', url: 'https://www.linkedin.com/in/aar9av/',),
+                    SocialIconButton(icon: 'Instagram.png', url: 'https://www.instagram.com/aar9av/',),
+                    SocialIconButton(icon: 'Codechef.png', url: 'https://www.codechef.com/users/aar9av',),
+                    SocialIconButton(icon: 'Leetcode.png', url: 'https://leetcode.com/u/aar9av/',),
                     SizedBox(height: 10,),
                   ],
                 ),

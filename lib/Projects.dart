@@ -50,9 +50,9 @@ class _ProjectsState extends State<Projects> {
           SizedBox(height: isAll ? 80 : 0,),
           isAll ? Project(idx: 2, name: 'True Link', description: 'True Link is a dating platform that helps users with connect to someone special, allows anonymous public confessions without revealing their identity, and enables real time chatting.', tech: ['Flutter', 'Firebase', 'My SQL', 'Neon DB'], github: 'https://github.com/aar9av/True-Link', link: 'https://drive.google.com/file/d/1AoCahlonVRVbBRl2WXPtnoNWJj7rJHdH/view?usp=sharing', image: 'TrueLink', color: Colors.lightBlueAccent) : SizedBox(height: 0,),
           SizedBox(height: isAll ? 80 : 0,),
-          isAll ? Project(idx: 3, name: 'Chess Game', description: 'A chess game with two modes: Play with AI (implemented using Google Gemini AI) for automated chess moves and two-player mode, incorporating features like moves validation, pawn promotion, castling, check warnings, and possible move indicators.', tech: ['Flutter' ,'Google Gemini AI'], github: 'https://github.com/aar9av/Sicillian_Defence', link: 'apk', image: 'Chess', color: Colors.orange) : SizedBox(height: 0,),
-          //SizedBox(height: isAll ? 80 : 0,),
-          //Project(idx: 4, name: 'Portfolio', description: 'Developed an Android application to streamline attendance management with GPS-based tracking and Google Authentication for enhanced security, reducing manual intervention and improves accuracy.', tech: ['Flutter', 'Figma'], github: 'https://github.com/aar9av/Portfolio', link: 'apk', image: 'Portfolio', color: ThemeColors.slate),
+          isAll ? Project(idx: 3, name: 'Chess Game', description: 'A chess game with two modes: Play with AI (implemented using Google Gemini AI) for automated chess moves and two-player mode, incorporating features like moves validation, pawn promotion, castling, check warnings, and possible move indicators.', tech: ['Flutter' ,'Google Gemini AI'], github: 'https://github.com/aar9av/Sicillian_Defence', link: 'https://drive.google.com/file/d/18mOGOcrSlu1OQSTiRDC9mD9RQ1FOBpke/view?usp=sharing', image: 'Chess', color: Colors.orange) : SizedBox(height: 0,),
+          SizedBox(height: isAll ? 80 : 0,),
+          isAll ? Project(idx: 4, name: 'Portfolio', description: 'A portfolio website showcasing my skills in Flutter development, competitive coding, and project management. Includes detailed sections on academic projects, work experience, technical expertise, and personal achievements.', tech: ['Flutter', 'Figma'], github: 'https://github.com/aar9av/Portfolio', link: 'https://aar9av.github.io/', image: 'Portfolio', color: ThemeColors.slate) : SizedBox(height: 0,),
           SizedBox(height: 80,),
           Center(
             child: GestureDetector(
@@ -215,7 +215,7 @@ class _ProjectState extends State<Project> {
                             _launchURL(widget.github);
                           },
                           child: Image.asset(
-                            'SideBar/GitHub.png',
+                            'GitHub.png',
                             height: 24,
                             width: 24,
                             color: ThemeColors.slate,
@@ -231,9 +231,10 @@ class _ProjectState extends State<Project> {
                           onTap: () {
                             _launchURL(widget.link);
                           },
-                          child: Icon(
-                            Icons.link,
-                            size: 30,
+                          child: Image.asset(
+                            'Link.png',
+                            height: 24,
+                            width: 24,
                             color: ThemeColors.slate,
                           ),
                         ),
@@ -321,7 +322,7 @@ class _ProjectState extends State<Project> {
                   _launchURL(widget.github);
                 },
                 child: Image.asset(
-                  'SideBar/GitHub.png',
+                  'GitHub.png',
                   height: 24,
                   width: 24,
                   color: ThemeColors.slate,
@@ -337,9 +338,10 @@ class _ProjectState extends State<Project> {
                 onTap: () {
                   _launchURL(widget.link);
                 },
-                child: Icon(
-                  Icons.link,
-                  size: 30,
+                child: Image.asset(
+                  'Link.png',
+                  height: 24,
+                  width: 24,
                   color: ThemeColors.slate,
                 ),
               ),
@@ -384,6 +386,11 @@ class _ImagesSectionState extends State<ImagesSection> {
         ),
         child: Stack(
           children: [
+            widget.image == 'Portfolio' ?
+            Image.asset(
+              'Portfolio.png',
+              fit: BoxFit.cover,
+            ) :
             Padding(
               padding: const EdgeInsets.all(10.0),
               child: Row(
@@ -393,13 +400,13 @@ class _ImagesSectionState extends State<ImagesSection> {
                     width: 20,
                   ),
                   Image.asset(
-                    'Projects/${widget.image}-1.jpg',
+                    '${widget.image}-1.jpg',
                   ),
                   Image.asset(
-                    'Projects/${widget.image}-2.jpg',
+                    '${widget.image}-2.jpg',
                   ),
                   Image.asset(
-                    'Projects/${widget.image}-3.jpg',
+                    '${widget.image}-3.jpg',
                   ),
                   SizedBox(
                     width: 20,
@@ -414,8 +421,9 @@ class _ImagesSectionState extends State<ImagesSection> {
               color: ThemeColors.navy.withOpacity(0.9),
               child: Center(
                 child: Image.asset(
-                  'Projects/${widget.image}.png',
+                  widget.image == 'Portfolio' ? 'Logo.png' : '${widget.image}.png',
                   width: MediaQuery.of(context).size.width * 0.1,
+                  color: widget.image == 'Portfolio' ? ThemeColors.white : null,
                 ),
               ),
             )
